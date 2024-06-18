@@ -178,6 +178,13 @@ function removeSateliteHUD() {
   if (planetTarget === -1) {
     alert("Não foi possível encontrar o nome do planeta!");
   }
+
+  const satelites = prompt(
+    "Nome do(s) satelite(s) que quer remover? Escreva separado por vírgula ex: 'lua,proteu,tritão'"
+  ).split(",");
+
+  const planet = { nome, satelites };
+  removeSatelite(planet);
 }
 
 function getPlanets() {
